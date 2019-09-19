@@ -69,10 +69,3 @@ class Manager extends Employee{
     this.developers.splice(index, count);
   }
 }
-
-
-
-let Dev = new Employee('Danila', 21, '03.10.1997', 80000, 'Front-End');
-
-let t = new Manager('t', 22);
-let dev = new Developer();
