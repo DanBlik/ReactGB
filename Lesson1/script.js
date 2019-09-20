@@ -11,6 +11,9 @@ let loop = (times = 0, cb = null) => {
 let calculateArea = (width, length) => ({area: width*length, figure: 'Прямоугольник', input: `Ширина: ${width}, Длина: ${length}`});
 
 /*#3*/
+
+let developers = [];
+
 class Human{
   constructor(name, age, dateOfBirth){
     this.name = name;
@@ -19,7 +22,8 @@ class Human{
   }
 
   displayInfo(){
-    return `Name: ${this.name}, Age: ${this.age}, Date of birth: ${this.dateOfBirth}`;
+    //return `Name: ${this.name}, Age: ${this.age}, Date of birth: ${this.dateOfBirth}`;
+    return this;
   }
 }
 
@@ -59,13 +63,25 @@ class Manager extends Employee{
     super();
     this.name = name;
     this.age = age;
-    this.developers = [1,2,3]
+    this.developers = developers;
   }
 
-  addDeveloper(){
-    this.developers.push(new Developer());
+  addDeveloper(developer){
+    this.developers.push(developer);
   }
   deleteDeveloper(index, count){
     this.developers.splice(index, count);
   }
+  getDeveloper(){
+    return this.developers;
+  }
 }
+let manager = new Manager('Maria', 22);
+let d1 = new Developer();
+let d2 = new Developer();
+
+
+/*4*/
+
+
+
